@@ -37,7 +37,7 @@ spec:
     stage('Snyk Scan') {
       failFast true
       environment {
-        SNYK_TOKEN = credentials('snyk-token')
+        SNYK_TOKEN = credentials('74285fbf-bad6-479c-9c3a-707290bbcdf9')
       }	
       parallel {
         stage('dependency scan') {
@@ -45,7 +45,7 @@ spec:
             container('snyk-python') {
               sh """
                 pip install -r requirements.txt
-                snyk auth ${SNYK_TOKEN}
+                snyk auth ${'74285fbf-bad6-479c-9c3a-707290bbcdf9'}
                 snyk test --json \
                   --file=requirements.txt \
                   --severity-threshold=high \
