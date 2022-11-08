@@ -33,6 +33,12 @@ spec:
 """
     }
   }
+   stages {
+        stage('Cloning Git') {
+            steps {
+                 'https://github.com/saiteja3747/python-project.git'
+            }
+        }
   stages {
     stage('Snyk Scan') {
       failFast true
