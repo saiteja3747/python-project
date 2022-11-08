@@ -47,7 +47,7 @@ spec:
                 pip install -r requirements.txt
                 snyk auth ${'74285fbf-bad6-479c-9c3a-707290bbcdf9'}
                 snyk test --json \
-                  --file=requirements.txt \
+                  --file=Dockerfile \
                   --severity-threshold=high \
                   --org=cvega \
                   --project-name=python-project
