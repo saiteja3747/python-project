@@ -33,12 +33,6 @@ spec:
 """
     }
   }
-   stages {
-        stage('Cloning Git') {
-            steps {
-                 'https://github.com/saiteja3747/python-project.git'
-            }
-        }
   stages {
     stage('Snyk Scan') {
       failFast true
@@ -56,7 +50,7 @@ spec:
                   --file=requirements.txt \
                   --severity-threshold=high \
                   --org=cvega \
-                  --project-name=project-python
+                  --project-name=python-project
               """
             }
           }
@@ -72,7 +66,7 @@ spec:
                   --file=Dockerfile \
                   --severity-threshold=high \
                   --org=cvega \
-                  --project-name=project-python
+                  --project-name=python-project
               """
             }
           }
