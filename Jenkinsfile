@@ -60,7 +60,7 @@ spec:
             container('snyk-docker') {
               sh """
                 docker build -t python-project .
-                snyk auth ${SNYK_TOKEN}
+                snyk auth ${'74285fbf-bad6-479c-9c3a-707290bbcdf9'}
                 snyk test --json \
                   --docker python-project:latest \
                   --file=Dockerfile \
